@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario Contacto - HTML5, CSS3, JAVASCRIPT Y PHP - Tutosytips</title>
+	<link rel="stylesheet" href="estilos.css" />	
+    
+	<script type="text/javascript" src="form.js"></script>
+
+	<!--[if lt IE 9]>
+	    	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<section>
+		<h2>Formulario Contacto - html, css, javascript, php</h2>
+	
+		<form action="prose-form.php" method="post" class="contact-form"  onsubmit="return validar(this);">				
+			<div class="formulario">
+				<div class="column">
+					<label for="nombre">Nombre <span>(requerido)</span></label>
+					<input type="text" name="nombre" class="form-input" onblur="revisar(this);"/>
+					
+					<label for="email">Email <span>(requerido)</span></label>
+					<input type="email" name="email" class="form-input" onblur="revisar(this); revisaremail(this);"/>
+					
+					<label for="asunto">Asunto <span>(requerido)</span></label>
+					<input type="text" name="asunto" class="form-input" onblur="revisar(this);"/>
+				</div>
+				
+				<div class="column">
+					<label for="mensaje">Mensaje </label>
+					<textarea name="mensaje" class="form-input" ></textarea>
+				</div>				
+				
+				<input class="form-btn" type="submit" value="Enviar Mensaje"/>
+			</div>		
+		</form>
+	</section>
+	
+</body>
+</html>
